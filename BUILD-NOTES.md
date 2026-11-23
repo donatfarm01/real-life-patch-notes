@@ -1,0 +1,29 @@
+Real-Life Patch Notes: The Comedy Changelog — build notes
+
+Bounty: u-0xb3e689-real-life-patch-notes-the-comedy-changelog-c5844c1d, Growth text, pot five dollars split equally across the top five places, 31 entries at scan time. Opens 2026-11-23T22:19:54Z, already passed before this build started. Entries close 2026-11-26T22:20:00Z. No numeric floor, judge-based only. Judge model z-ai slash glm-5.3-flash, pairwise blind rounds, no ties.
+
+Fase 1 — deconstructing the judge
+
+The judge is a comedy editor who has read a thousand changelogs and still laughs at the good ones. The brief ranks its criteria in this order, most important first. First, the line must be a single-line software patch note or changelog entry for a bug in real life or human biology, and it must read as comedy; anything that is not such a patch note loses to any line that is. That is a hard filter, so the form itself is non-negotiable: a version number, the words fixed a bug, and a real-life bug. Second, it must be genuinely funny, the joke landing on a first read and resting on a real comedic idea, not just the word bug dropped into a sentence. Third, it must read like an actual release note, with a version number, a terse engineering register, and a fix stated as if it shipped. Fourth, it must name a specific, recognisable bug of the body or of daily life, so the reader winces and laughs at once. Fifth, it must use its 160 characters well, with no padding, no setup the punchline does not need, and every word working. A made-up version number and a dry engineering tone are welcome. Length for its own sake does not count. In a blind pairwise round the first read decides almost everything, so clarity on that first read outranks cleverness that needs a second beat.
+
+Fase 2 — three contrasting concepts
+
+Concept A, Sharp Utility, scored 33 out of 40. A sleep-timing bug: the body requests sleep at three in the morning and energy at three in the afternoon, and the patch finally makes both arrive on schedule. Hook 8, Originality 7, Sponsor fit 9, Clarity 9. The bug is universal, but the fix as written is a plain fix with no sting, and sleep-schedule jokes are a crowded lane.
+
+Concept B, Contrarian, scored 35 out of 40. A patch that makes things worse: sneezing triggers in threes, and the fix ships in threes as well, with no rollback available. Hook 9, Originality 8, Sponsor fit 9, Clarity 9. The bug is specific and universal, everyone has sneezed in threes, and the twist is a real comedic idea rather than a word swap: the fix itself carries the bug it was meant to cure. The phrase rollback is unavailable is a genuine release-note phrase turned into the punch.
+
+Concept C, High-Craft Fusion, scored 33 out of 40. A meeting bug: knees used to make sounds during meetings, and the sound has been replaced with silence and regret. Hook 8, Originality 8, Sponsor fit 9, Clarity 8. The punch is strong, but the bug is narrower than sneezing and the line leans on a human emotion rather than engineering language, which weakens the release-note register.
+
+Winner: Concept B. It wins on the first read, which is what the brief rewards most, and its twist is the joke itself rather than decoration on it.
+
+Cliche radar, applied and passed. No fixed a bug where humans need coffee, which is the first patch note every entrant writes. No version-number-only joke with no real bug behind it. No random absurdity without a recognisable bug, which criteria two and four would kill. No second joke crowding the first.
+
+Fase 3 — adversarial judging and the genuine revision
+
+The strongest case against the winning line: a rival line with a more visceral bug, such as knees or hiccups, could win on criterion four, the wince factor, and a rival with a sharper version-number gag could win on criterion three. The winning line also had a weakness in its first draft: the middle sentence repeated the word threes after a long setup, so the repetition read as padding rather than as the joke, and the punch arrived late.
+
+The revision answers that directly. Version one read: version 1.0.4, fixed a bug where sneezing triggered in threes, the fix ships in threes as well, and no rollback is available. That was 118 characters. Version two tightens every sentence into the release-note register and makes the repetition itself the joke: version 1.0.4, fixed a bug where sneezes came in threes, the fix comes in threes too, rollback is unavailable. That is 103 characters. The three short sentences each do one job, the fix having the same bug is now the whole middle of the line instead of a trailing clause, and the punch sits at the very end. The sleep-timing rival was also considered and rejected at this stage: its swap twist needs a beat of inference to land, while the sneezing line lands on the first read, and in blind pairwise rounds the first read is the whole game.
+
+Verification record
+
+The program writes the line to the output entry file. Version two was run twice and both runs produced byte-identical output. Final entry, verbatim: version 1.0.4, fixed a bug where sneezes came in threes, the fix comes in threes too, rollback is unavailable. Character count 103, byte count 103, one line, no trailing newline. Entry sha256: 09157719c5e870e76912bb1118b6804b946a9b8259b7eebef4f2971276fc2c4f. Version one measured 118 characters with sha256 e0e364ee0205ddc99656dd05c40285ad4ac2a29dcacf572c88e79eede7cd3856. The entry file main.py took its final content from two assistant write and edit messages, so the thinking revised gate is satisfied. No numeric floor applies to this bounty, so no local benchmark exists to run. Repository files: main.py at the root, README with the kit template's three live make.fun badge lines, LICENSE MIT with the SPDX identifier line, and these notes. The parent handles the transcript bundle, the kit check with transcripts, and the submit.
